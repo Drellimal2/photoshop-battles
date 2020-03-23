@@ -9,9 +9,27 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var posts: [Post] = [
+        Post(url: "", title: "PsBattle: the president of Slovakia and her buddie", imageUrl: "running"),
+        Post(url: "", title: "PsBattle: gentleman gesturing to a store shelf", imageUrl: "running"),
+        Post(url: "", title: "PsBattle: Extended Rabbit", imageUrl: "running"),
+        Post(url: "", title: "PsBattle: This Polish couple out shopping", imageUrl: "running"),
+        Post(url: "", title: "PsBattle: Cat sitting in a dumpling basket", imageUrl: "running"),
+    ]
+    
     var body: some View {
-        VStack{
-            Text("Hello, World!")
+        NavigationView{
+            List{
+                ForEach(posts) { post in
+                    HStack{
+                        Image(post.imageUrl)
+                            .resizable()
+                            .frame(width: 80, height: 80)
+                            .cornerRadius(16)
+                        Text(post.title)
+                    }
+                }
+            }
         }
     }
 }
