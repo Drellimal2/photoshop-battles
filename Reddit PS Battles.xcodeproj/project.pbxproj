@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E7098AC52427C4E40033C470 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7098AC42427C4E40033C470 /* Post.swift */; };
 		E7336ECB2426CAAF006BD884 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7336ECA2426CAAF006BD884 /* AppDelegate.swift */; };
 		E7336ECD2426CAAF006BD884 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7336ECC2426CAAF006BD884 /* SceneDelegate.swift */; };
 		E7336ECF2426CAAF006BD884 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7336ECE2426CAAF006BD884 /* ContentView.swift */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E7098AC42427C4E40033C470 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		E7336EC72426CAAF006BD884 /* Reddit PS Battles.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Reddit PS Battles.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7336ECA2426CAAF006BD884 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E7336ECC2426CAAF006BD884 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -76,6 +78,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E7098AC32427C4C90033C470 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E7098AC42427C4E40033C470 /* Post.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		E7336EBE2426CAAF006BD884 = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +109,7 @@
 		E7336EC92426CAAF006BD884 /* Reddit PS Battles */ = {
 			isa = PBXGroup;
 			children = (
+				E7098AC32427C4C90033C470 /* Models */,
 				E7336ECA2426CAAF006BD884 /* AppDelegate.swift */,
 				E7336ECC2426CAAF006BD884 /* SceneDelegate.swift */,
 				E7336ECE2426CAAF006BD884 /* ContentView.swift */,
@@ -270,6 +281,7 @@
 				E7336ECB2426CAAF006BD884 /* AppDelegate.swift in Sources */,
 				E7336ECD2426CAAF006BD884 /* SceneDelegate.swift in Sources */,
 				E7336ECF2426CAAF006BD884 /* ContentView.swift in Sources */,
+				E7098AC52427C4E40033C470 /* Post.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
