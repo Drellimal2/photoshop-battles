@@ -31,16 +31,17 @@ struct PostDetailView: View {
             
             List{
                 ForEach(submissions) { submission in
-                    HStack{
-                        Image(submission.imageUrl)
-                            .resizable()
-                            .frame(width: 80, height: 80)
-                            .cornerRadius(16)
-                        Text(submission.title)
+                    NavigationLink(destination: ImagePreviewerView(imageUrl: submission.imageUrl)) {
+                        HStack{
+                            Image(submission.imageUrl)
+                                .resizable()
+                                .frame(width: 80, height: 80)
+                                .cornerRadius(16)
+                            Text(submission.title)
+                        }
                     }
                 }
             }.navigationBarTitle("Photoshop Battles!")
-            
         }
         .navigationBarTitle(Text(post.title), displayMode: .inline)
     }
