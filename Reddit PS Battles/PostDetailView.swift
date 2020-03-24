@@ -11,6 +11,15 @@ import SwiftUI
 struct PostDetailView: View {
     let post: Post
     
+    @State
+    var submissions: [Post] = [
+        Post(url: "", title: "PsBattle: the president of Slovakia and her buddie", imageUrl: "running"),
+        Post(url: "", title: "PsBattle: gentleman gesturing to a store shelf", imageUrl: "running"),
+        Post(url: "", title: "PsBattle: Extended Rabbit", imageUrl: "running"),
+        Post(url: "", title: "PsBattle: This Polish couple out shopping", imageUrl: "running"),
+        Post(url: "", title: "PsBattle: Cat sitting in a dumpling basket", imageUrl: "running"),
+    ]
+    
     var body: some View {
         VStack {
             Image(post.imageUrl)
@@ -19,6 +28,19 @@ struct PostDetailView: View {
                 .cornerRadius(16)
                 .padding()
             Text(post.title)
+            
+            List{
+                ForEach(submissions) { submission in
+                    HStack{
+                        Image(submission.imageUrl)
+                            .resizable()
+                            .frame(width: 80, height: 80)
+                            .cornerRadius(16)
+                        Text(submission.title)
+                    }
+                }
+            }.navigationBarTitle("Photoshop Battles!")
+            
         }
         .navigationBarTitle(Text(post.title), displayMode: .inline)
     }
