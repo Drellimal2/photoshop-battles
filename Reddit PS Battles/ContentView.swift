@@ -21,9 +21,11 @@ struct ContentView: View {
         NavigationView{
             List{
                 ForEach(posts) { post in
-                    PostListView(post: post)
+                    NavigationLink(destination: PostDetailView(post: post)) {
+                        PostListItemView(post: post)
+                    }
                 }
-            }
+            }.navigationBarTitle("Photoshop Battles!")
         }
     }
 }
@@ -34,7 +36,7 @@ struct ContentView_Previews: PreviewProvider {
     }
 }
 
-struct PostListView: View {
+struct PostListItemView: View {
     let post: Post
     
     var body: some View {
