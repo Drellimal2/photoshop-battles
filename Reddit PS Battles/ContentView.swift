@@ -21,13 +21,7 @@ struct ContentView: View {
         NavigationView{
             List{
                 ForEach(posts) { post in
-                    HStack{
-                        Image(post.imageUrl)
-                            .resizable()
-                            .frame(width: 80, height: 80)
-                            .cornerRadius(16)
-                        Text(post.title)
-                    }
+                    PostListView(post: post)
                 }
             }
         }
@@ -37,5 +31,19 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+    }
+}
+
+struct PostListView: View {
+    let post: Post
+    
+    var body: some View {
+        HStack{
+            Image(post.imageUrl)
+                .resizable()
+                .frame(width: 80, height: 80)
+                .cornerRadius(16)
+            Text(post.title)
+        }
     }
 }

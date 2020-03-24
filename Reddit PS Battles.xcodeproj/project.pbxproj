@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E7098AC52427C4E40033C470 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7098AC42427C4E40033C470 /* Post.swift */; };
+		E7098AC9242980A50033C470 /* PostDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7098AC8242980A50033C470 /* PostDetailView.swift */; };
 		E7336ECB2426CAAF006BD884 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7336ECA2426CAAF006BD884 /* AppDelegate.swift */; };
 		E7336ECD2426CAAF006BD884 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7336ECC2426CAAF006BD884 /* SceneDelegate.swift */; };
 		E7336ECF2426CAAF006BD884 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7336ECE2426CAAF006BD884 /* ContentView.swift */; };
@@ -37,6 +38,7 @@
 
 /* Begin PBXFileReference section */
 		E7098AC42427C4E40033C470 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		E7098AC8242980A50033C470 /* PostDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailView.swift; sourceTree = "<group>"; };
 		E7336EC72426CAAF006BD884 /* Reddit PS Battles.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Reddit PS Battles.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7336ECA2426CAAF006BD884 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E7336ECC2426CAAF006BD884 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 				E7336ED52426CAB1006BD884 /* LaunchScreen.storyboard */,
 				E7336ED82426CAB1006BD884 /* Info.plist */,
 				E7336ED22426CAB1006BD884 /* Preview Content */,
+				E7098AC8242980A50033C470 /* PostDetailView.swift */,
 			);
 			path = "Reddit PS Battles";
 			sourceTree = "<group>";
@@ -279,6 +282,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E7336ECB2426CAAF006BD884 /* AppDelegate.swift in Sources */,
+				E7098AC9242980A50033C470 /* PostDetailView.swift in Sources */,
 				E7336ECD2426CAAF006BD884 /* SceneDelegate.swift in Sources */,
 				E7336ECF2426CAAF006BD884 /* ContentView.swift in Sources */,
 				E7098AC52427C4E40033C470 /* Post.swift in Sources */,
