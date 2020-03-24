@@ -21,7 +21,7 @@ struct ContentView: View {
         NavigationView{
             List{
                 ForEach(posts) { post in
-                    NavigationLink(destination: PostDetailView(post: post)) {
+                    NavigationLink(destination: PostDetailView(post: post)){
                         PostListItemView(post: post)
                     }
                 }
