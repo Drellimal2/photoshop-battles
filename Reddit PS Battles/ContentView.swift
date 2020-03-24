@@ -21,15 +21,11 @@ struct ContentView: View {
         NavigationView{
             List{
                 ForEach(posts) { post in
-                    HStack{
-                        Image(post.imageUrl)
-                            .resizable()
-                            .frame(width: 80, height: 80)
-                            .cornerRadius(16)
-                        Text(post.title)
+                    NavigationLink(destination: PostDetailView(post: post)) {
+                        PostListItemView(post: post)
                     }
                 }
-            }
+            }.navigationBarTitle("Photoshop Battles!")
         }
     }
 }
@@ -37,5 +33,19 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+    }
+}
+
+struct PostListItemView: View {
+    let post: Post
+    
+    var body: some View {
+        HStack{
+            Image(post.imageUrl)
+                .resizable()
+                .frame(width: 80, height: 80)
+                .cornerRadius(16)
+            Text(post.title)
+        }
     }
 }
