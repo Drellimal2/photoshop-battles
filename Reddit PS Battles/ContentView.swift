@@ -5,10 +5,23 @@
 //  Created by Shane Richards on 3/21/20.
 //  Copyright © 2020 DevCore Studios. All rights reserved.
 //
-
+import Foundation
 import SwiftUI
 
 struct ContentView: View {
+    
+    func loadData() {
+        guard let url = URL(string: "https://www.reddit.com/r/photoshopbattles.json") else { fatalError("URL is not correct!") }
+        
+        let request = URLRequest(url: url)
+        
+        URLSession.shared.dataTask(with: request) { data, response, error in
+            if let data = data{
+                print(data)
+            }
+        }.resume()
+    }
+    
     @State var posts: [Post] = [
         Post(url: "", title: "PsBattle: the president of Slovakia and her buddie", imageUrl: "running"),
         Post(url: "", title: "PsBattle: gentleman gesturing to a store shelf", imageUrl: "running"),
@@ -25,7 +38,9 @@ struct ContentView: View {
                         PostListItemView(post: post)
                     }
                 }
-            }.navigationBarTitle("Photoshop Battles!")
+            }
+            .navigationBarTitle("Photoshop Battles!")
+            .onAppear(perform: loadData)
         }
     }
 }
