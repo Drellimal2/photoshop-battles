@@ -1,10 +1,3 @@
-//
-//  ContentView.swift
-//  Reddit PS Battles
-//
-//  Created by Shane Richards on 3/21/20.
-//  Copyright © 2020 DevCore Studios. All rights reserved.
-//
 import Foundation
 import SwiftUI
 
