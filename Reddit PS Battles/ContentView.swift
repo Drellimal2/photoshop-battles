@@ -15,13 +15,7 @@ struct ContentView: View {
         }.resume()
     }
     
-    @State var posts: [Post] = [
-        Post(url: "", title: "PsBattle: the president of Slovakia and her buddie", imageUrl: "running"),
-        Post(url: "", title: "PsBattle: gentleman gesturing to a store shelf", imageUrl: "running"),
-        Post(url: "", title: "PsBattle: Extended Rabbit", imageUrl: "running"),
-        Post(url: "", title: "PsBattle: This Polish couple out shopping", imageUrl: "running"),
-        Post(url: "", title: "PsBattle: Cat sitting in a dumpling basket", imageUrl: "running"),
-    ]
+    @State var posts: [Post] = []
     
     var body: some View {
         NavigationView{
@@ -39,8 +33,15 @@ struct ContentView: View {
 }
 
 struct ContentView_Previews: PreviewProvider {
+    
     static var previews: some View {
-        ContentView()
+        ContentView(posts: [
+            Post(url: "", title: "PsBattle: the president of Slovakia and her buddie", imageUrl: "running"),
+            Post(url: "", title: "PsBattle: gentleman gesturing to a store shelf", imageUrl: "running"),
+            Post(url: "", title: "PsBattle: Extended Rabbit", imageUrl: "running"),
+            Post(url: "", title: "PsBattle: This Polish couple out shopping", imageUrl: "running"),
+            Post(url: "", title: "PsBattle: Cat sitting in a dumpling basket", imageUrl: "running"),
+        ])
     }
 }
 
